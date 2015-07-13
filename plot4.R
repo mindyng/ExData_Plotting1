@@ -11,6 +11,7 @@ DateTime<-paste(as.Date(Electric1$Date), Electric1$Time)
 Electric1$DT<-as.POSIXct(DateTime)
 
 #Constructing plot4
+png(file = "plot4.png", width = 480, height = 480)
 par(mfrow=c(2,2), mar=c(4,4,2,1), oma=c(0,0,2,0))
 with(Electric1, {
   plot(Global_active_power~DT, type="l", 

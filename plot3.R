@@ -11,6 +11,7 @@ DateTime<-paste(as.Date(Electric1$Date), Electric1$Time)
 Electric1$DT<-as.POSIXct(DateTime)
 
 #Constructing plot3
+png(file = "plot3.png", width = 480, height = 480)
 with(Electric1, {
   plot(Sub_metering_1~DT, type="l",
        ylab="Energy sub metering", xlab="")
